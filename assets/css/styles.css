@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&display=swap");
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
@@ -17,10 +17,11 @@
   --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
   --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Baloo 2', sans-serif;
   --biggest-font-size: 5rem;
   --bigger-font-size: 3.5rem;
   --big-font-size: 2.5rem;
+    --h1-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: .938rem;
@@ -47,6 +48,8 @@
     --biggest-font-size: 7.5rem;
     --bigger-font-size: 4.5rem;
     --big-font-size: 4rem;
+        --h1-font-size: 2rem;
+
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -405,26 +408,32 @@ img {
 
 .products__container {
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem 1.5rem;
-  padding-top: 3rem;
+  gap: 5rem .5rem;
+  padding-top: 1rem;
 }
 
 .products__card {
   position: relative;
-  height: 132px;
+  height: 220px;
   background-color: var(--container-color);
   padding: .75rem;
   border-radius: .5rem;
   display: grid;
 }
 
-.products__img {
-  width: 80px;
+
+
+
+.products__name {
+  font-size: var(--h1-font-size);
+text-align: center;
+
+  width: 175px;
   position: absolute;
   inset: 0;
   margin-right: auto;
   margin-left: auto;
-  top: -3rem;
+  top: 1rem;
 }
 
 .products__content {
@@ -655,7 +664,7 @@ img {
     align-items: center;
   }
   .products__container {
-    grid-template-columns: repeat(3, 142px);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
   }
 }
@@ -721,9 +730,9 @@ img {
     margin-bottom: var(--mb-2);
   }
   .products__container {
-    grid-template-columns: repeat(3, 162px);
-    gap: 6rem 3rem;
-    padding-top: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+    padding-top: 3rem;
   }
   .products__card {
     height: 152px;
